@@ -1,0 +1,8 @@
+Choripan;Koshao;10;3;2026-09-16
+Terremoto;Lemus;0.5;2026-09-16
+Choripan;MrNacho;9;3;2026-09-16
+Choripan;Koshao;8;3;2026-09-18
+Terremoto;Koshao;1.5;2026-09-18
+Terremoto;Koshao;0.75;2026-09-18
+Choripan;Lemus;12;4;2026-09-18
+Terremoto;MrNacho;2;2026-09-19
