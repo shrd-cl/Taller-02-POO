@@ -66,5 +66,5 @@ al sumar litros y se bloquearon cambios si falla la lectura de participantes.
 Ambos integrantes están en las primeras dos líneas de Main.java; Eclipse puede
 plegar el comentario y mostrar únicamente su primera línea.
 
-No se evaluó el README general de talleres, que no fue proporcionado. No se ha
-publicado en GitHub. El repositorio Git preparado es local.
+No se evaluó el README general de talleres, que no fue proporcionado.
+El repositorio del equipo es https://github.com/shrd-cl/Taller-02-POO.

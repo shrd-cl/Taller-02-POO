@@ -1,4 +1,4 @@
-# Taller 02 — La fonda del Papu
+# Taller-02-POO — La fonda del Papu
 
 Aplicación Java de consola para administrar consumos de choripanes y terremotos.
 
@@ -27,12 +27,11 @@ la consola en **Run Configurations → Common → Encoding → UTF-8**.
 
 ## Clonación y ejecución desde una terminal
 
-El repositorio local está inicializado con Git. Falta vincularlo al repositorio
-de GitHub del equipo. Una vez publicado, reemplace `URL_DEL_REPOSITORIO_DEL_EQUIPO`
-por su URL real:
+Repositorio del equipo: [shrd-cl/Taller-02-POO](https://github.com/shrd-cl/Taller-02-POO).
+Para descargar el proyecto:
 
 ```text
-git clone URL_DEL_REPOSITORIO_DEL_EQUIPO Taller02Fonda
+git clone https://github.com/shrd-cl/Taller-02-POO.git Taller02Fonda
 cd Taller02Fonda
 javac -encoding UTF-8 -d bin src/taller02/*.java
 java -cp bin taller02.Main
@@ -40,8 +39,8 @@ java -cp bin taller02.Main
 
 En Eclipse también puede importar la carpeta resultante de la clonación mediante
 el procedimiento anterior. Mantenga commits descriptivos al realizar mejoras.
-El historial local actual fue creado por Codex; no sustituye el desarrollo y
-los commits propios del equipo ni acredita por sí solo trabajo en GitHub.
+Los commits de implementación generados por Codex conservan esa autoría; no
+sustituyen el desarrollo ni los commits propios del equipo.
 
 ## Funcionalidades
 
@@ -139,8 +138,6 @@ La validación automática realizada se documenta en `VALIDACION.md`.
 
 - Revisar el README general de talleres referido por el enunciado: no fue adjuntado
   y sus reglas adicionales no están verificadas.
-- Crear o vincular el repositorio de GitHub del equipo, publicarlo y sustituir la
-  URL de clonación de ejemplo por su URL real.
 - Revisar y comprender el código; el enunciado solicita originalidad del equipo.
 
 ## Revisión frente al enunciado adjunto
@@ -156,7 +153,7 @@ La validación automática realizada se documenta en `VALIDACION.md`.
 | Datos de integrantes en primeras cinco líneas | Ambos integrantes aparecen en las primeras dos líneas de Main.java |
 | Compilación y ejecución | Compilación sin advertencias y ejecución comprobada en Eclipse |
 | Documentación de ejecución y testeo | Instrucciones y comprobación manual en este README; resultados en VALIDACION.md |
-| GitHub e historial de desarrollo | Hay commits locales; falta GitHub y no se acredita el proceso de trabajo del equipo |
+| GitHub e historial de desarrollo | Repositorio del equipo indicado arriba; el historial conserva la autoría de los commits y no acredita por sí solo el proceso de trabajo del equipo |
 | Reglas del README general y originalidad | Requieren revisión adicional del equipo; no se consideran verificadas |
 
 La revisión cubre el enunciado adjunto y los casos de prueba documentados; no
