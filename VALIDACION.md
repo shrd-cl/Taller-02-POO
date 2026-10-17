@@ -10,7 +10,7 @@ Resultado: compilación correcta, sin advertencias.
 
 ## Pruebas de dominio y archivos
 
-Un programa de pruebas externo al proyecto ejecutó **42 comprobaciones correctas**:
+Un programa de pruebas externo al proyecto ejecutó **47 comprobaciones correctas**:
 
 - Carga de ocho registros; cantidades totales y por usuario.
 - Litros totales, kcal por persona y total sin redondeos intermedios.
@@ -23,6 +23,10 @@ Un programa de pruebas externo al proyecto ejecutó **42 comprobaciones correcta
 - Creación de Consumido.txt cuando no existe.
 - Límite de 200 consumos y bloqueo de escritura ante una carga de 201 registros.
 - Fallo de escritura simulado: se conservan la memoria y el archivo original.
+- Recarga de decimales pequeños y grandes que Java serializa usando exponentes.
+- Umbral de dos litros acumulando veinte consumos de 0,1 L y consumos de 0,7,
+  0,7 y 0,6 L; suma compensada para reducir errores de precisión.
+- Protección del respaldo si falta el archivo original.
 
 Las pruebas externas pueden usar utilidades adicionales; esas utilidades no forman
 parte del código Java entregable. El programa del taller solo importa las cinco
@@ -50,11 +54,17 @@ en el proyecto conservan los ocho registros iniciales.
 
 ## Alcance y pendientes
 
-La compilación y las pruebas fueron ejecutadas con Java desde herramientas de
-archivos y procesos. No se verificó la ejecución dentro de Eclipse: el plugin de
-control de computadora pudo abrir el asistente y escribir el nombre del proyecto,
-pero falló repetidamente al usar sus controles con el mensaje
-`element 189 is not available in cached app state for eclipse.exe`.
+La compilación y las pruebas automatizadas fueron ejecutadas con Java desde
+herramientas de archivos y procesos. Además, se importó el proyecto desde la
+interfaz de Eclipse, se ejecutó `Main` y se comprobó que su consola carga ocho
+registros y muestra los valores esperados de kcal por usuario y el total 58,83.
+Los listados de ambos tipos también se observaron funcionando en Eclipse.
+
+La revisión encontró y corrigió una incompatibilidad entre la notación científica
+generada al guardar números y el lector de datos. También se mejoró la precisión
+al sumar litros y se bloquearon cambios si falla la lectura de participantes.
+Ambos integrantes están en las primeras dos líneas de Main.java; Eclipse puede
+plegar el comentario y mostrar únicamente su primera línea.
 
 No se evaluó el README general de talleres, que no fue proporcionado. No se ha
 publicado en GitHub. El repositorio Git preparado es local.

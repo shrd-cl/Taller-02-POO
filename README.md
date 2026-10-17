@@ -66,7 +66,7 @@ Terremoto;Consumidor;Litros;YYYY-MM-DD
 ```
 
 El consumidor debe existir en `Participantes.txt`. Se aceptan números decimales
-positivos con punto o coma; se guardan con punto. Las fechas se validan, incluidos
+positivos con punto o coma y notación científica; se guardan con punto. Las fechas se validan, incluidos
 años bisiestos, con años de 0001 a 9999. Se rechazan valores numéricos que
 desborden los cálculos. Cada archivo admite hasta 200 registros válidos.
 
@@ -138,8 +138,8 @@ La validación automática realizada se documenta en `VALIDACION.md`.
 
 - Revisar el README general de talleres referido por el enunciado: no fue adjuntado
   y sus reglas adicionales no están verificadas.
-- Importar y ejecutar en Eclipse: se comprobó compilación con el JDK; el control
-  de la interfaz de Eclipse falló durante el asistente y no se verificó su compilador.
+- El proyecto ya fue importado y ejecutado en Eclipse. Se comprobó la carga de
+  ocho registros y el cálculo de kcal desde su consola.
 - Crear o vincular el repositorio de GitHub del equipo, publicarlo y sustituir la
   URL de clonación de ejemplo por su URL real.
 - Revisar y comprender el código; el enunciado solicita originalidad del equipo.

@@ -21,11 +21,16 @@ public class Metricas {
 
     public double litros(String persona, String fecha) {
         double total = 0;
+        double compensacion = 0;
         for (int i = 0; i < registro.getCantidadConsumos(); i++) {
             Consumo consumo = registro.getConsumo(i);
             if (consumo instanceof Terremoto && corresponde(consumo, persona)
                     && (fecha == null || consumo.getFecha().equals(fecha))) {
-                total += ((Terremoto) consumo).getLitros();
+                // Suma compensada: evita perder fracciones al acumular muchos decimales.
+                double corregido = ((Terremoto) consumo).getLitros() - compensacion;
+                double siguiente = total + corregido;
+                compensacion = (siguiente - total) - corregido;
+                total = siguiente;
             }
         }
         return total;

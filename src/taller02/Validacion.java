@@ -15,8 +15,9 @@ public final class Validacion {
 
     public static double numero(String texto) {
         String normalizado = texto.trim().replace(',', '.');
-        // Acepta decimales ordinarios; evita NaN, infinito, hexadecimales y sufijos Java.
-        if (!normalizado.matches("[+]?(?:[0-9]+(?:\\.[0-9]*)?|\\.[0-9]+)")) {
+        // Double.toString usa exponentes para ciertos valores guardados en el archivo.
+        // Se permite esa notación para poder volver a cargar todos los valores válidos.
+        if (!normalizado.matches("[+]?(?:[0-9]+(?:\\.[0-9]*)?|\\.[0-9]+)(?:[eE][+-]?[0-9]+)?")) {
             throw new IllegalArgumentException("Ingrese un número decimal mayor que cero.");
         }
         double valor = Double.parseDouble(normalizado);

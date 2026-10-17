@@ -51,6 +51,7 @@ public class RegistroFonda {
             }
             if (archivo.ioException() != null) throw archivo.ioException();
         } catch (IOException | SecurityException e) {
+            cargaSegura = false;
             System.out.println("Advertencia: no se pudo leer Participantes.txt. " + e.getMessage());
         }
     }
