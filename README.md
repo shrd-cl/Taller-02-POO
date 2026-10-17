@@ -2,13 +2,9 @@
 
 Aplicación Java de consola para administrar consumos de choripanes y terremotos.
 
-**Integrantes:** Renato Martínez (ITI) y Alonso Arriagada (ITI). Los datos completos
-solicitados están en las primeras dos líneas de `src/taller02/Main.java`.
+Integrantes: Renato Martínez (ITI) y Alonso Arriagada (ITI). 
 
 ## Requisitos y ejecución en Eclipse
-
-- JDK 21 y Eclipse IDE for Java Developers.
-- No requiere dependencias externas, Maven ni Gradle.
 
 1. En Eclipse, seleccione **File → Import → General → Existing Projects into Workspace**.
 2. En **Select root directory**, seleccione la carpeta `Taller02Fonda`, donde se
@@ -36,12 +32,6 @@ cd Taller02Fonda
 javac -encoding UTF-8 -d bin src/taller02/*.java
 java -cp bin taller02.Main
 ```
-
-En Eclipse también puede importar la carpeta resultante de la clonación mediante
-el procedimiento anterior. Mantenga commits descriptivos al realizar mejoras.
-Los commits de implementación generados por Codex conservan esa autoría; no
-sustituyen el desarrollo ni los commits propios del equipo.
-
 ## Funcionalidades
 
 - Ver ambos tipos de consumo con consumidor, dimensiones o litros, fecha y kcal.
