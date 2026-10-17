@@ -16,8 +16,8 @@ solicitados están en las primeras dos líneas de `src/taller02/Main.java`.
 3. Abra `src/taller02/Main.java` y elija **Run As → Java Application**.
 4. Interactúe en la pestaña **Console**. Los menús aceptan las opciones numéricas mostradas.
 
-Si el asistente **New Java Project** sigue abierto, ciérrelo con **Cancel** antes de
-importar: el proyecto ya está preparado. No es necesario crear otro proyecto vacío.
+Si el proyecto ya aparece en **Package Explorer**, puede ejecutarlo directamente
+desde `Main.java`; no necesita volver a importarlo.
 
 Los archivos `Participantes.txt` y `Consumido.txt` deben estar en la raíz del proyecto,
 no dentro de `src`. En **Run Configurations → Arguments → Working directory** use
@@ -66,8 +66,8 @@ Terremoto;Consumidor;Litros;YYYY-MM-DD
 ```
 
 El consumidor debe existir en `Participantes.txt`. Se aceptan números decimales
-positivos con punto o coma y notación científica; se guardan con punto. Las fechas se validan, incluidos
-años bisiestos, con años de 0001 a 9999. Se rechazan valores numéricos que
+positivos con punto o coma y notación científica; se guardan con punto. Las fechas
+se validan, incluidos años bisiestos, con años de 0001 a 9999. Se rechazan valores numéricos que
 desborden los cálculos. Cada archivo admite hasta 200 registros válidos.
 
 - Choripán: kcal = `(largo * ancho) / 3.0`.
@@ -77,7 +77,8 @@ desborden los cálculos. Cada archivo admite hasta 200 registros válidos.
 
 Las fórmulas son las del taller. Se redondea únicamente al mostrar dos decimales.
 Con los ocho registros incluidos, el total es **58,83 kcal**; el ejemplo del
-enunciado muestra 58,84 porque suma importes previamente redondeados.
+enunciado muestra 58,84, valor que coincide con sumar los totales por usuario
+previamente redondeados. El programa conserva la precisión hasta la presentación.
 
 ## Diseño POO
 
@@ -92,7 +93,7 @@ enunciado muestra 58,84 porque suma importes previamente redondeados.
 | `Metricas` | Cantidades, kcal, litros y agrupación por fecha |
 | `Validacion` | Nombres, números y fechas |
 
-Los atributos son privados. Los consumos se almacenan en `Consumo[200]` y se
+Los atributos que contienen los datos son privados. Los consumos se almacenan en `Consumo[200]` y se
 tratan polimórficamente para calcular kcal, mostrar y guardar. No hay colecciones
 dinámicas. Las únicas importaciones del programa son `Scanner`, `File`,
 `FileWriter`, `BufferedWriter` e `IOException`; las demás clases utilizadas
@@ -138,8 +139,25 @@ La validación automática realizada se documenta en `VALIDACION.md`.
 
 - Revisar el README general de talleres referido por el enunciado: no fue adjuntado
   y sus reglas adicionales no están verificadas.
-- El proyecto ya fue importado y ejecutado en Eclipse. Se comprobó la carga de
-  ocho registros y el cálculo de kcal desde su consola.
 - Crear o vincular el repositorio de GitHub del equipo, publicarlo y sustituir la
   URL de clonación de ejemplo por su URL real.
 - Revisar y comprender el código; el enunciado solicita originalidad del equipo.
+
+## Revisión frente al enunciado adjunto
+
+| Requisito | Estado y evidencia |
+|---|---|
+| POO, encapsulamiento, abstracción y polimorfismo | Implementados en las clases del dominio y sus operaciones comunes |
+| Solo vectores y capacidad de 200 | Vectores de capacidad fija; rechazo de un consumo adicional probado |
+| Importaciones permitidas | Solo Scanner, File, FileWriter, BufferedWriter e IOException |
+| Lectura, menús, listados y modificaciones | Implementados y probados; ambos tipos tienen sus campos específicos |
+| Persistencia y métricas | Probadas, incluida recarga después de agregar, editar y eliminar |
+| Control de errores | Probado con entradas inválidas, índices incorrectos, archivos faltantes y líneas defectuosas |
+| Datos de integrantes en primeras cinco líneas | Ambos integrantes aparecen en las primeras dos líneas de Main.java |
+| Compilación y ejecución | Compilación sin advertencias y ejecución comprobada en Eclipse |
+| Documentación de ejecución y testeo | Instrucciones y comprobación manual en este README; resultados en VALIDACION.md |
+| GitHub e historial de desarrollo | Hay commits locales; falta GitHub y no se acredita el proceso de trabajo del equipo |
+| Reglas del README general y originalidad | Requieren revisión adicional del equipo; no se consideran verificadas |
+
+La revisión cubre el enunciado adjunto y los casos de prueba documentados; no
+equivale a garantizar una calificación ni ausencia de fallos en cualquier entorno.
